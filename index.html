@@ -5,6 +5,8 @@
             H cute hehe ¯\_(ツ)_/¯
         </title>
         <!-- <link rel="stylesheet" href="main.css"> -->
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+
     </head>
     <body>
             
@@ -13,6 +15,19 @@
         <div class="box box1"></div>
         <div class="box box2"></div>
         <div class="box box3"></div>
+        <div class="container">
+            <div class="stuff">
+              <div class="button" tabindex="1">
+                <span class="ion-help-circled"></span>
+              </div>
+              <div class="button" tabindex="2">
+                <span class="ion-help-circled"></span>
+              </div>
+              <div class="button" tabindex="3">
+                <span class="ion-help-circled"></span>
+              </div>
+            
+            </div>
         <style>
             html {
                 font-size: 40px;
@@ -73,7 +88,84 @@
                 background-position: center;
                 background-size: 50%;
                 margin-left:10%;
-        }
+            }
+            .stuff {
+                position: absolute;
+                top: 34%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                }
+                
+            .button {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                margin: 0 auto;
+                width: 200px;
+                height: 70px;
+                font-size: 50px;
+                -webkit-transition: all 0.4s ease-in;
+                transition: all 0.4s ease-in;
+                }
+            .button span[class^='ion'] {
+                position: relative;
+                }
+            .button:before {
+                content: '';
+                background-color: aliceblue;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                -webkit-transform: scale(0.001, 0.001);
+                        transform: scale(0.001, 0.001);
+                }
+            .button:focus {
+                outline: 0;
+                color: #fff;
+                }
+            .button:focus:before {
+                -webkit-animation: effect_dylan 0.8s ease-out;
+                        animation: effect_dylan 0.8s ease-out;
+                }
+                @-webkit-keyframes effect_dylan {
+                50% {
+                    -webkit-transform: scale(1.5, 1.5);
+                            transform: scale(1.5, 1.5);
+                    opacity: 0;
+                }
+                99% {
+                    -webkit-transform: scale(0.001, 0.001);
+                            transform: scale(0.001, 0.001);
+                    opacity: 0;
+                }
+                100% {
+                    -webkit-transform: scale(0.001, 0.001);
+                            transform: scale(0.001, 0.001);
+                    opacity: 1;
+                }
+                }
+                @keyframes effect_dylan {
+                50% {
+                    -webkit-transform: scale(1.5, 1.5);
+                            transform: scale(1.5, 1.5);
+                    opacity: 0;
+                }
+                99% {
+                    -webkit-transform: scale(0.001, 0.001);
+                            transform: scale(0.001, 0.001);
+                    opacity: 0;
+                }
+                100% {
+                    -webkit-transform: scale(0.001, 0.001);
+                            transform: scale(0.001, 0.001);
+                    opacity: 1;
+                }
+                }
         </style>
     </body>
 </html>
