@@ -8,9 +8,12 @@
             
         <h1 align="center" style="color: rgb(245, 204, 94); font-size: 50px; "> TRÒ CHƠI CON MÒE🤪</h1>    
         <p align="center" style="color: rgb(231, 169, 94); font-size: 30px;">Đoán xem con mòe nằm ở ô mô? </p>
-        <div class="box box1"></div>
+        <!-- <div class="box box1"></div>
         <div class="box box2"></div>
-        <div class="box box3"></div>
+        <div class="box box3"></div> -->
+        <div class="box box11"></div>
+        <div class="box box22"></div>
+        <div class="box box33"></div>
         <style>
             html {
                 font-size: 40px;
@@ -29,25 +32,26 @@
                 justify-content: center;
                 float:left;
             }
-            .box1:hover{
+            .box11:hover{
                 background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83XDWeCD61DGjLgvjBYC1up7ncsGenTi3yA&usqp=CAU);
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: center;
             }
-            .box2:hover{
+            .box22:hover{
                 background-image: url(http://bloganchoi.com/wp-content/uploads/2016/10/nyasu-2.jpg);
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: center;
             }
-            .box3:hover{
+            .box33:hover{
                 background-image: url(https://www.dexerto.com/wp-content/uploads/2021/02/Fennekin.jpg);
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: center;
             }
-            .box1 {
+            .box11 {
+                position: relative;
                 font-size: 0.8rem;
                 /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
@@ -56,27 +60,75 @@
                 background-size: 50%;
                 margin-left: 10%;
             }
-            .box2 {
+            .box22 {
+                position: relative;
                 font-size: 0.8rem;
+                /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 50%;
+                margin-left: 10%;
+            }
+            .box33 {
+                position: relative;
+                font-size: 0.8rem;
+                /* background-color:darkslategrey; */
+                background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 50%;
+                margin-left: 10%;
+            }
+            .box1 {
+                position: absolute;
+                font-size: 0.8rem;
+                /* background-color:darkslategrey; */
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83XDWeCD61DGjLgvjBYC1up7ncsGenTi3yA&usqp=CAU);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 50%;
+                margin-left: 10%;
+            }
+            .box2 {
+                position: absolute;
+                font-size: 0.8rem;
+                background-image: url(http://bloganchoi.com/wp-content/uploads/2016/10/nyasu-2.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 50%;
                 margin-left:10%;
             }
             .box3 {
+                position: absolute;
                 font-size: 0.8rem;
-                background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
+                background-image: url(https://www.dexerto.com/wp-content/uploads/2021/02/Fennekin.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 50%;
                 margin-left:10%;
-        }
+            }
         </style>
         <form style="font-size: 70px; color:rgb(211, 145, 65);">  
-            Conmòe tên chi?: <input style="font-size: 30px;" type="text" name="name"/><br/>  
-            <button style="margin-left:40%; font-size:30px; color: rgba(5, 6, 78, 1);">Kiểm tra</button>
+            Conmòe tên chi?: <input style="font-size: 30px;" type="text" id="name"/><br/>  
+        <button onclick="result()" style="margin-left:40%; font-size:30px; color: rgba(5, 6, 78, 1);">Kiểm tra</button>
+        
+        
         </form> 
-        <iframe style="margin-top: 30px; margin-left: 10%;" width="420" height="345" src="https://www.youtube.com/embed/-4MlN-imvck?autoplay=1"></iframe> 
+
+        <!-- <iframe style="margin-top: 30px; margin-left: 10%;" width="420" height="345" src="https://www.youtube.com/embed/-4MlN-imvck?autoplay=0"></iframe>  -->
+        <script>
+
+            function result(){
+                var nameinp = document.querySelector('#name').value;
+                var wrong="Sai rồi đồ Ga`!!! 😤";
+                var right="Đúng rùi giỏi wá!!!😉 "
+                if (nameinp=="Nyasu"||nameinp=="nyasu"||nameinp=="NYASU")
+                {
+                    alert(right);
+                }
+                else {alert(wrong);}
+            }
+        </script>
     </body>
 </html>
