@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title > H cute hehe ¯\_(ツ)_/¯</title>
+        <title > Me0w mEoW ¯\_(ツ)_/¯</title>
         <!-- <link rel="stylesheet" href="main.css"> -->
     </head>
     <body>
             
         <h1 align="center" style="color: rgb(245, 204, 94); font-size: 50px; "> TRÒ CHƠI CON MÒE🤪</h1>    
         <p align="center" style="color: rgb(231, 169, 94); font-size: 30px;">Đoán xem con mòe nằm ở ô mô? </p>
-        <!-- <div class="box box1"></div>
-        <div class="box box2"></div>
-        <div class="box box3"></div> -->
-        <div class="box box11"></div>
-        <div class="box box22"></div>
-        <div class="box box33"></div>
+        <div class="boxun box1"></div>
+        <div class="boxun box2"></div>
+        <div class="boxun box3"></div>
+        <div class="boxon box11" id="pic1"></div>
+        <div class="boxon box22" id="pic2"></div>
+        <div class="boxon box33" id="pic3"></div>
+        <input onclick="pic()" type="button" class="but" id="btn1" value="Ảnh 1?" style="margin-left: 10%;"/>
+        <input type="button" class="but" id="btn2" value="Ảnh 2?" style="margin-left: 3%;"/>
+        <input type="button" class="but" id="btn3" value="Ảnh 3?" style="margin-left: 3%;"/>
         <style>
             html {
                 font-size: 40px;
@@ -23,35 +26,29 @@
                 background-position: center;
 
             }
-            .box {
+            
+            .but {
+                font-size: 30px;
+                /* display: flex;
+                align-items: center;
+                justify-content: center;
+                float:left;
+                 */
+                /* margin-left: 50%; */
+                margin-top: 100px;    
+            }
+            .boxon {
                 width:  20%;
                 height: 250px;
-                background-color: rgb(49, 47, 46); 
+                background-color: rgb(44, 43, 43); 
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 float:left;
-            }
-            .box11:hover{
-                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83XDWeCD61DGjLgvjBYC1up7ncsGenTi3yA&usqp=CAU);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
-            }
-            .box22:hover{
-                background-image: url(http://bloganchoi.com/wp-content/uploads/2016/10/nyasu-2.jpg);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
-            }
-            .box33:hover{
-                background-image: url(https://www.dexerto.com/wp-content/uploads/2021/02/Fennekin.jpg);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
+                margin-top: -249px;
             }
             .box11 {
-                position: relative;
+                /* position: relative; */
                 font-size: 0.8rem;
                 /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
@@ -59,9 +56,11 @@
                 background-position: center;
                 background-size: 50%;
                 margin-left: 10%;
+                /* display: none; */
+
             }
             .box22 {
-                position: relative;
+                /* position: relative; */
                 font-size: 0.8rem;
                 /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
@@ -69,9 +68,10 @@
                 background-position: center;
                 background-size: 50%;
                 margin-left: 10%;
+                /* display: none; */
             }
             .box33 {
-                position: relative;
+                /* position: relative; */
                 font-size: 0.8rem;
                 /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
@@ -79,47 +79,75 @@
                 background-position: center;
                 background-size: 50%;
                 margin-left: 10%;
+                /* display:none; */
+            }
+            .boxun {
+                width:  20%;
+                height: 252px;
+                background-color: rgb(44, 43, 43); 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                float:left;
+                /* margin-top:-249px; */
             }
             .box1 {
-                position: absolute;
+                /* position: absolute; */
                 font-size: 0.8rem;
                 /* background-color:darkslategrey; */
-                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83XDWeCD61DGjLgvjBYC1up7ncsGenTi3yA&usqp=CAU);
+                background-image: url(sai.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: 50%;
+                background-size: 100%;
                 margin-left: 10%;
             }
             .box2 {
-                position: absolute;
+                /* position: absolute; */
                 font-size: 0.8rem;
-                background-image: url(http://bloganchoi.com/wp-content/uploads/2016/10/nyasu-2.jpg);
+                background-image: url(dung.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: 50%;
+                background-size: 100%;
                 margin-left:10%;
             }
             .box3 {
-                position: absolute;
+                /* position: absolute; */
                 font-size: 0.8rem;
-                background-image: url(https://www.dexerto.com/wp-content/uploads/2021/02/Fennekin.jpg);
+                background-image: url(sai2.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: 50%;
+                background-size: 100%;
                 margin-left:10%;
             }
         </style>
-        <form style="font-size: 70px; color:rgb(211, 145, 65);">  
-            Conmòe tên chi?: <input style="font-size: 30px;" type="text" id="name"/><br/>  
+        <form style="font-size: 70px; color:rgb(211, 145, 65); margin-top: 100px;">  
+            Con mòe tên chi?: <input style="font-size: 30px;" type="text" id="name"/><br/>  
         <button onclick="result()" style="margin-left:40%; font-size:30px; color: rgba(5, 6, 78, 1);">Kiểm tra</button>
         
         
         </form> 
-
-        <!-- <iframe style="margin-top: 30px; margin-left: 10%;" width="420" height="345" src="https://www.youtube.com/embed/-4MlN-imvck?autoplay=0"></iframe>  -->
+        
+        <!-- <iframe style="margin-top: 30px; margin-left: 10%;" width="420px" height="345px" src="https://www.youtube.com/embed/-4MlN-imvck?autoplay=0"></iframe>  -->
         <script>
+            document.getElementById("btn1").onclick = function () {
+                document.getElementById("pic1").style.visibility = 'hidden';
+                document.getElementById("pic2").style.visibility = 'visible';
+                document.getElementById("pic3").style.visibility = 'visible';
+            };
+            document.getElementById("btn2").onclick = function () {
+                document.getElementById("pic2").style.visibility = 'hidden';
+                document.getElementById("pic1").style.visibility = 'visible';
+                document.getElementById("pic3").style.visibility = 'visible';
+            };
+            document.getElementById("btn3").onclick = function () {
+                document.getElementById("pic3").style.visibility = 'hidden';
+                document.getElementById("pic1").style.visibility = 'visible';
+                document.getElementById("pic2").style.visibility = 'visible';
+            };
 
-            function result(){
+        
+            function result()
+            {
                 var nameinp = document.querySelector('#name').value;
                 var wrong="Sai rồi đồ Ga`!!! 😤";
                 var right="Đúng rùi giỏi wá!!!😉 "
@@ -128,6 +156,11 @@
                     alert(right);
                 }
                 else {alert(wrong);}
+            }
+            function pic()
+            {
+                var wrong1="Sai rồi trời ơi -.-";
+                alert(wrong1);
             }
         </script>
     </body>
