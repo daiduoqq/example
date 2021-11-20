@@ -8,15 +8,28 @@
             
         <h1 align="center" style="color: rgb(245, 204, 94); font-size: 50px; "> TRÒ CHƠI CON MÒE🤪</h1>    
         <p align="center" style="color: rgb(231, 169, 94); font-size: 30px;">Đoán xem con mòe nằm ở ô mô? </p>
-        <div class="boxun box1"></div>
+        <div on class="boxun box1"></div>
         <div class="boxun box2"></div>
         <div class="boxun box3"></div>
-        <div class="boxon box11" id="pic1"></div>
-        <div class="boxon box22" id="pic2"></div>
-        <div class="boxon box33" id="pic3"></div>
-        <input type="button" class="but" id="btn1" value="Ảnh 1?" style="margin-left: 10%;"/>
-        <input type="button" class="but" id="btn2" value="Ảnh 2?" style="margin-left: 3%;"/>
-        <input type="button" class="but" id="btn3" value="Ảnh 3?" style="margin-left: 3%;"/>
+        <div onclick="pic()" class="boxon box11" id="pic1"></div>
+        <div onclick="pic1()" class="boxon box22" id="pic2"></div>
+        <div onclick="pic()" class="boxon box33" id="pic3"></div>
+        <!-- <div class = "boxes">
+            <div class="box_wrapper">
+                <div class="box box1"></div>
+                    <div class="pokemon" id="pic1"></div>
+            </div>
+        
+                <div class="box_wrapper">
+                <div class="box box2"></div>
+                    <div class="pokemon" id="pic1"></div>
+            </div>
+        
+                <div class="box_wrapper">
+                <div class="box box3"></div>
+                    <div class="pokemon" id="pic1"></div>
+            </div>
+        </div> -->
         <style>
             html {
                 font-size: 40px;
@@ -37,7 +50,14 @@
                 /* margin-left: 50%; */
                 margin-top: 20px;    
             }
-            
+            /* .boxes{
+                
+	            display: flex;
+	            justify-content: space-between; 
+            }
+            .pokemon{
+	            display: block;
+            } */
             .boxon {
                 width:  20%;
                 height: 250px;
@@ -47,40 +67,35 @@
                 justify-content: center;
                 float:left;
                 margin-top: -249px;
-            }
+                /* animation: fadeIn linear .3s                */
+                }
+                /* @keyframes fadeIn {
+	                from {opacity: 0;}
+	                to {opacity: 1;}
+                } */
             .box11 {
-                /* position: relative; */
                 font-size: 0.8rem;
-                /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 50%;
                 margin-left: 10%;
-                /* display: none; */
 
             }
             .box22 {
-                /* position: relative; */
                 font-size: 0.8rem;
-                /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 50%;
                 margin-left: 10%;
-                /* display: none; */
             }
             .box33 {
-                /* position: relative; */
-                font-size: 0.8rem;
-                /* background-color:darkslategrey; */
                 background-image: url(https://cdn.pixabay.com/photo/2016/09/16/11/03/pokemon-1673770_1280.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 50%;
                 margin-left: 10%;
-                /* display:none; */
             }
             .boxun {
                 width:  20%;
@@ -90,12 +105,9 @@
                 align-items: center;
                 justify-content: center;
                 float:left;
-                /* margin-top:-249px; */
             }
             .box1 {
-                /* position: absolute; */
                 font-size: 0.8rem;
-                /* background-color:darkslategrey; */
                 background-image: url(sai.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
@@ -103,7 +115,6 @@
                 margin-left: 10%;
             }
             .box2 {
-                /* position: absolute; */
                 font-size: 0.8rem;
                 background-image: url(dung.jpg);
                 background-repeat: no-repeat;
@@ -112,7 +123,6 @@
                 margin-left:10%;
             }
             .box3 {
-                /* position: absolute; */
                 font-size: 0.8rem;
                 background-image: url(sai2.jpg);
                 background-repeat: no-repeat;
@@ -121,7 +131,7 @@
                 margin-left:10%;
             }
         </style>
-        <form style="font-size: 40px; color:rgb(211, 145, 65); margin-top: 30px; margin-left: 3%;">  
+        <form style="font-size: 40px; color:rgb(211, 145, 65); margin-top: 28%; margin-left: 3%;">  
             Con mòe tên chi?: <input style="font-size: 30px;" type="text" id="name"/><br/>  
         <button onclick="result()" style="margin-left:32%; font-size:30px; color: rgba(5, 6, 78, 1);">Kiểm tra</button>
         
@@ -130,23 +140,32 @@
         
         <!-- <iframe style="margin-top: 30px; margin-left: 10%;" width="420px" height="345px" src="https://www.youtube.com/embed/-4MlN-imvck?autoplay=0"></iframe>  -->
         <script>
-            document.getElementById("btn1").onclick = function () {
+            document.getElementById("pic1").onclick = function () {
+                var wrong1="Sai rồi trời ơi -.-";
+                alert(wrong1);
                 document.getElementById("pic1").style.visibility = 'hidden';
                 document.getElementById("pic2").style.visibility = 'visible';
                 document.getElementById("pic3").style.visibility = 'visible';
+                
+                
             };
-            document.getElementById("btn2").onclick = function () {
+            document.getElementById("pic2").onclick = function () {
+                var right1="Đúng rồi giỏi wá ^O^";
+                alert(right1);
                 document.getElementById("pic2").style.visibility = 'hidden';
                 document.getElementById("pic1").style.visibility = 'visible';
                 document.getElementById("pic3").style.visibility = 'visible';
             };
-            document.getElementById("btn3").onclick = function () {
+            document.getElementById("pic3").onclick = function () {
+                var wrong1="Sai rồi trời ơi -.-";
+                alert(wrong1);
                 document.getElementById("pic3").style.visibility = 'hidden';
                 document.getElementById("pic1").style.visibility = 'visible';
                 document.getElementById("pic2").style.visibility = 'visible';
             };
 
-        
+            const boxes = document.querySelectorAll('.box');
+            
             function result()
             {
                 var nameinp = document.querySelector('#name').value;
@@ -158,11 +177,7 @@
                 }
                 else {alert(wrong);}
             }
-            function pic()
-            {
-                var wrong1="Sai rồi trời ơi -.-";
-                alert(wrong1);
-            }
+    
         </script>
     </body>
 </html>
